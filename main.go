@@ -10,11 +10,9 @@ func attack(charName, charClass string) string {
 	if charClass == "warrior" {
 		return fmt.Sprintf("%s нанес урон противнику равный %d.", charName, 5+randInt(3, 5))
 	}
-
 	if charClass == "mage" {
 		return fmt.Sprintf("%s нанес урон противнику равный %d.", charName, 5+randInt(5, 10))
 	}
-
 	if charClass == "healer" {
 		return fmt.Sprintf("%s нанес урон противнику равный %d.", charName, 5+randInt(-3, -1))
 	}
@@ -26,11 +24,9 @@ func defence(charName, charClass string) string {
 	if charClass == "warrior" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randInt(5, 10))
 	}
-
 	if charClass == "mage" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randInt(-2, 2))
 	}
-
 	if charClass == "healer" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randInt(2, 5))
 	}
@@ -42,11 +38,9 @@ func special(charName, charClass string) string {
 	if charClass == "warrior" {
 		return fmt.Sprintf("%s применил специальное умение `Выносливость %d`", charName, 80+25)
 	}
-
 	if charClass == "mage" {
 		return fmt.Sprintf("%s применил специальное умение `Атака %d`", charName, 5+40)
 	}
-
 	if charClass == "healer" {
 		return fmt.Sprintf("%s применил специальное умение `Защита %d`", charName, 10+30)
 	}
@@ -58,11 +52,9 @@ func startTraining(charName, charClass string) string {
 	if charClass == "warrior" {
 		fmt.Printf("%s, ты Воитель - отличный боец ближнего боя.\n", charName)
 	}
-
 	if charClass == "mage" {
 		fmt.Printf("%s, ты Маг - превосходный укротитель стихий.\n", charName)
 	}
-
 	if charClass == "healer" {
 		fmt.Printf("%s, ты Лекарь - чародей, способный исцелять раны.\n", charName)
 	}
@@ -81,11 +73,9 @@ func startTraining(charName, charClass string) string {
 		if cmd == "attack" {
 			fmt.Println(attack(charName, charClass))
 		}
-
 		if cmd == "defence" {
 			fmt.Println(defence(charName, charClass))
 		}
-
 		if cmd == "special" {
 			fmt.Println(special(charName, charClass))
 		}
